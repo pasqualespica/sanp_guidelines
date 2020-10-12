@@ -166,10 +166,10 @@ dove inseire una descrione breve (che subito consenta di capire il tipo di modif
 
 > **NOTA** : l'associazione del nuovo `tag` sarà cura del _ToDeDefine ... reviewer ?? owner della PR_
 
-14. La rimonzione del `-RC.x` avverrà in modo automaticato tramite una [GitHub Action](https://github.com/features/actions) che si accorgerà che la versione in **PROD** corrisponde con quella etichattata e cancellerà il vecchio `tag` associandone uno nuovo. _WIP : ToDeDefine : HowTo_
-    > _In attessa dell'automatismo sarà fatto manualmente._
+1.  La rimozione del `-RC.x` avverrà in modo manuale, quando ci sarà una nuova versione in **PROD** corrispondente con quella etichattata, si cancellerà il vecchio `tag` associandone uno nuovo. 
+    > _In attessa dell'automatismo sarà fatto manualmente._ _WIP : ToDeDefine : HowTo_
 
-> _Esempio :_ Se attualmente in **PROD** c'è la versione `2.2.6` ed è stata creata una nuova release `2.2.7.RC.1`, appena l'action si accorgerà che tale versione è passata dall'ambiente **UAT** a quello di **PROD** rimuoverà il tag `2.2.7.RC.1` e ne crearà uno nuovo `2.2.7`
+> _Esempio :_ Se attualmente in **PROD** c'è la versione `2.2.6` ed è stata creata una nuova release `2.2.7.RC.1`, appena ci si accorgerà che tale versione è passata dall'ambiente **UAT** a quello di **PROD** si rimuoverà il tag `2.2.7.RC.1` e se ne crearà uno nuovo `2.2.7`
 
 ## Guidelines
 
