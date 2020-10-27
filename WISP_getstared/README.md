@@ -18,7 +18,7 @@ PM : Payment manager & WISP2
 - [git](https://git-scm.com/)
 - [maven](https://maven.apache.org/)
 - [docker](https://www.docker.com/) + account on [dockerhub](https://hub.docker.com/)
->the `docker` account is needed to be able to` pull` the image [oracle-db-ee] (https://hub.docker.com/_/oracle-database-enterprise-edition) and for which accept the **Terms of Service** via web
+>the `docker` account is needed to be able to `pull` the image [oracle-db-ee](https://hub.docker.com/_/oracle-database-enterprise-edition) and for which accept the **Terms of Service** via web
 
 
 ## Entries to add in the Host file
