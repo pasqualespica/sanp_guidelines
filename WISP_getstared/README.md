@@ -11,14 +11,15 @@ PM : Payment manager & WISP2
   - [5. Deploy on wildfly](#5-deploy-on-wildfly)
   - [6. WISP GetStarted 🚀](#6-wisp-getstarted-)
 
->NOTA : I seguenti passi mostrano come lanciare in locale il _solo_ WISP :
+>The following steps show how to run _only_ WISP locally :
 
 ## Prerequisites
 
 - [git](https://git-scm.com/)
 - [maven](https://maven.apache.org/)
 - [docker](https://www.docker.com/) + account on [dockerhub](https://hub.docker.com/)
->NOTA : l'account `docker` serve per poter fare la `pull` dell'immagine [oracle-db-ee](https://hub.docker.com/_/oracle-database-enterprise-edition) e per la quale serve accettare via web i **Terms of Service**
+>the `docker` account is needed to be able to` pull` the image [oracle-db-ee] (https://hub.docker.com/_/oracle-database-enterprise-edition) and for which accept the **Terms of Service** via web
+
 
 ## Entries to add in the Host file
  
@@ -37,30 +38,32 @@ and add the following entries:
 First of all, clone the project
 
 ```
-git clone https://github.com/pagopa/pagopa-wisp2.0-pp-server
+git clone https://github.com/pagopa/pagopa-wisp2.0-pp-server pagopa-wisp2.0-pp-server && cd $_
 ```
 
 ## 2. Add Oracle dependency
 
-move into root folder project `cd pagopa-wisp2.0-pp-server` (_created by the previous step_)
-
-Then typing
+Now from `cd pagopa-wisp2.0-pp-server` folder (_created by the previous step_) typing
 
 ```
 cd wildfly/docker/oracle/
+```
+and
+```
 mvn install:install-file -Dfile=./ojdbc8-12.2.0.1.jar -DgroupId=com.oracle -DartifactId=ojdbc8 -Dversion=12.2.0.1 -Dpackaging=jar
 ```
 
 ## 3. Build and Start Container
  
-Return into folder project directory `pagopa-wisp2.0-pp-server` and run
+Return into parent folder project directory `pagopa-wisp2.0-pp-server` and run
 ```
 docker-compose up
 ```
+> This commmand may take a few minutes (~3/4min) to run up four containers (wildfly,spidtest,oracledb and mocks)
  
 ## 4. Building the back-end side:
 
-Then compile and install _ALL_ packages typing :
+Then compile _ALL_ packages typing :
 
 ```
 cd pp-server
@@ -109,7 +112,7 @@ if all rights, you'll see something like that :
 [INFO] Finished at: 2020-10-27T10:12:53+01:00
 [INFO] ------------------------------------------------------------------------
 ```
->NOTA : la compilazione dovrebbe impiegare circa 40sec, anche se per il WISP serviranno solo due `ear` : `pp-restapi` e `pp-wallet`
+>compilation should take about 40sec, although the WISP will only take two `ear` : `pp-restapi` e `pp-wallet`
 
 ## 5. Deploy on wildfly
 
