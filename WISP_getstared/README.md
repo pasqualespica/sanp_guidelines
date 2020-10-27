@@ -17,6 +17,7 @@ PM : Payment manager & WISP2
 
 - [git](https://git-scm.com/)
 - [maven](https://maven.apache.org/)
+- Java 1.8 (suggestion for mac/linux user [jEnv](https://www.jenv.be/) cfr. [this article](https://medium.com/@chamikakasun/how-to-manage-multiple-java-version-in-macos-e5421345f6d0))
 - [docker](https://www.docker.com/) + account on [dockerhub](https://hub.docker.com/)
 >the `docker` account is needed to be able to `pull` the image [oracle-db-ee](https://hub.docker.com/_/oracle-database-enterprise-edition) and for which accept the **Terms of Service** via web
 
@@ -123,7 +124,7 @@ if all rights, you'll see something like that :
 Coping the `pp-restapi` e `pp-wallet` packages into `Wildfly` folder deploy typing :
 
 ```
-cp ./pp-wallet/pp-wallet-ear/target/pp-wallet-ear-0.0.0 ../wildfly/docker/deployments/
+cp ./pp-wallet/pp-wallet-ear/target/pp-wallet-ear-0.0.0.ear ../wildfly/docker/deployments/
 
 cp ./pp-restapi/pp-restapi-ear/target/pp-restapi-ear-0.0.0.ear ../wildfly/docker/deployments/
 ```
