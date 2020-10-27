@@ -57,6 +57,10 @@ mvn install:install-file -Dfile=./ojdbc8-12.2.0.1.jar -DgroupId=com.oracle -Dart
  
 Return into parent folder project directory `pagopa-wisp2.0-pp-server` and run
 ```
+docker login
+```
+and then
+```
 docker-compose up
 ```
 > This commmand may take a few minutes (~3/4min) to run up four containers (wildfly,spidtest,oracledb and mocks)
